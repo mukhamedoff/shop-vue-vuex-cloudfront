@@ -8,6 +8,10 @@
 
 		<v-spacer></v-spacer>
 
+		<span>Yevhen Mukhamedov!</span>
+
+		<v-spacer></v-spacer>
+
 		<v-account-btn-menu></v-account-btn-menu>
 
 		<v-btn data-test-id="cart-link" to="/cart" icon large>
