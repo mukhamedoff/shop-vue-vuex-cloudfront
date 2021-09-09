@@ -13,7 +13,7 @@
 					<v-card class="pa-2" data-test-id="product-card" outlined tile>
 						<v-img
 							height="250"
-							:src="`https://source.unsplash.com/540x250/?car,auto&sig=${index}`"
+							:src="`https://source.unsplash.com/540x250/?book,books&sig=${index}`"
 						></v-img>
 
 						<v-card-title>{{ product.title }}</v-card-title>

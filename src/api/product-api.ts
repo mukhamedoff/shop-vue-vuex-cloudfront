@@ -39,10 +39,16 @@ const deleteProductById = (id: string) => {
 	return axios.delete(`${API_PATHS.bff}/product/${id}`);
 };
 
+const updateProduct = (productToSave: Product) => {
+	console.info(`PUT saveProduct: ${JSON.stringify(productToSave)}`);
+
+	// return axios.put(`${API_PATHS.product}/products`, productToSave);
+};
+
 const saveProduct = (productToSave: Product) => {
 	console.info(`PUT saveProduct: ${JSON.stringify(productToSave)}`);
 
-	return axios.put(`${API_PATHS.bff}/product`, productToSave);
+	return axios.post(`${API_PATHS.product}/products`, productToSave);
 };
 
 export const productApi = {
@@ -51,4 +57,5 @@ export const productApi = {
 	fetchProducts,
 	fetchProductById,
 	saveProduct,
+	updateProduct,
 };

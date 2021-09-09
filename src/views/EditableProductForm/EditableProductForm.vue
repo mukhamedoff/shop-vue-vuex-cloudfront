@@ -112,7 +112,11 @@ export default Vue.extend({
 			this.isFetching = true;
 
 			try {
-				await productApi.saveProduct(values);
+				if (this.isEditableMode) {
+					await productApi.updateProduct(values);
+				} else {
+					await productApi.saveProduct(values);
+				}
 
 				this.$router.push('/admin/products');
 			} catch (e) {
